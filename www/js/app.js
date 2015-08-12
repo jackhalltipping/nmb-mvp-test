@@ -22,9 +22,9 @@ app.controller('MainCtrl', function($scope, $http) {
 
   $scope.restaurants = [];
 
-  $http.get('http://pacific-everglades-2252.herokuapp.com/api/jobseekers').then(function(resp) {
-      $scope.jobseekers = resp.data;
-      console.log($scope.jobseekers)
+  $http.get('http://pacific-everglades-2252.herokuapp.com/api/jobs').then(function(resp) {
+      $scope.jobs = resp.data;
+      console.log($scope.jobs)
   }, function(err) {
     console.error('ERR', err); // err.status will contain the status code
   });

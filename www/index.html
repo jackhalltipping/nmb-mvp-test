@@ -32,8 +32,10 @@
       <ion-content>
 
       <ion-list>
-        <ion-item ng-repeat="jobseeker in jobseekers">
-          {{ jobseeker.name }}
+        <ion-item ng-repeat="job in jobs">
+          {{ job.title }},
+          {{ job.wage | currency }},
+          {{ job.description }}
         </ion-item>
       </ion-list>
 
